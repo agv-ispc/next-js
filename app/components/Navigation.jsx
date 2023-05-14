@@ -8,7 +8,7 @@ const links = [{
   route: '/about'
 }]
 
-export default function Navigation () {
+export function Navigation () {
     return (
         <header>
         <nav>
