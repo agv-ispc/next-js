@@ -27,3 +27,8 @@ body {
 		background: black;
 	}
 }
+
+.like-button {
+  padding: 2px;
+  font-size: 10px;
+}

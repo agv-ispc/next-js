@@ -1,3 +1,5 @@
+import { LikeButton } from '../../LikeButton'
+
 const fetchCommnets = (id) => {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
     next: {
@@ -15,6 +17,7 @@ export default async function Post ({ params }) {
         <li key={comment.id}>
           <h2>{comment.name}</h2>
           <p>{comment.body}</p>
+          <LikeButton id={comment.id} />
         </li>))}
     </ul>
   )
