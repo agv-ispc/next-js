@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { ViewHandle } from './comments/ViewHandle'
 
 const fetchSinglePost = (id) => {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -15,8 +15,7 @@ export default async function Post ({ children, params }) {
     <article>
       <h1>{post.title}</h1>
       <p>{post.body}</p>
-      <Link href={`/posts/${id}/comments`}>Ver comentarios</Link>
-      {children}
+      <ViewHandle id={id}>{children}</ViewHandle>
     </article>
   )
 }
