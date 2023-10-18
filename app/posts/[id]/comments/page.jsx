@@ -2,6 +2,7 @@ import { LikeButton } from '../../LikeButton'
 
 const fetchCommnets = async (id) => {
   await new Promise(resolve => setTimeout(resolve, 2000))
+  //  throw new Error('Error al cargar los comentarios')
 
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
     next: {
